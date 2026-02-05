@@ -10,8 +10,8 @@ const pageConfig: PageConfig = {
   title: "AcoFork 的状态页",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/afoim', label: 'GitHub' },
-    { link: 'https://blog.acofork.com/', label: '博客' },
+    { link: 'https://github.com/fujiemel', label: 'GitHub' },
+    { link: 'https://www.zhbi.top/', label: '博客' },
   ],
 }
 
@@ -58,10 +58,21 @@ const workerConfig: WorkerConfig = {
       name: '洛杉矶vps',
       method: 'HEAD',
       target: 'https://395718.xyz',
-      statusPageLink: 'https://acofork-uptime.zeabur.app/status/acofork',
+      statusPageLink: 'https://395718.xyz',
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
+    },
+    {
+      id: 'luoshanji_xui',
+      name: '自建洛杉矶节点',
+      method: 'HEAD',
+      target: 'https://xu.395718.xyz',
+      statusPageLink: 'none',
+      hideLatencyChart: false,
+      expectedCodes: [200],
+      timeout: 10000,
+      // tooltip: '这是此监控的提示信息',
     },
     {
       id: 'blog_hexo',
@@ -72,6 +83,28 @@ const workerConfig: WorkerConfig = {
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
+    },
+    {
+      id: 'blog_astro',
+      name: '旧博客留念(Astro)',
+      method: 'HEAD',
+      target: 'https://fuwari.zhbi.top',
+      statusPageLink: 'https://fuwari.zhbi.top',
+      hideLatencyChart: false,
+      expectedCodes: [200],
+      timeout: 10000,
+      // tooltip: '这是此监控的提示信息',
+    },
+    {
+      id: 'luoshanji-openalist',
+      name: 'openalist',
+      method: 'HEAD',
+      target: 'https://alist.395718.xyz',
+      statusPageLink: 'https://alist.395718.xyz/',
+      hideLatencyChart: false,
+      expectedCodes: [200],
+      timeout: 10000,
+      // tooltip: '这是此监控的提示信息',
     },
   ],
   notification: {
