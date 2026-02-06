@@ -66,7 +66,7 @@ const workerConfig: WorkerConfig = {
     {
       id: 'luoshanji_xui',
       name: '自建洛杉矶节点',
-      method: 'GET',
+      method: 'HEAD',
       target: 'https://xu.395718.xyz/px3jyx95o/',
       // statusPageLink: 'none',
       hideLatencyChart: false,
